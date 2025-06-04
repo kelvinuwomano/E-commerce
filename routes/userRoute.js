@@ -11,7 +11,7 @@ userRouter.post("/login", login)
 // userRouter.put("/to-admin", adminMiddleware, toAdmin)
 // userRouter.put("/update-user/:id",  protect, updateUser)
 userRouter.get("/all-user", protect, adminMiddleware, getAllUser)
-userRouter.get("/one-product/:productId", protect, getOneProduct)
+userRouter.get("/one-product/:productId", getOneProduct)
 // userRouter.get("all-product", protect, getAllProduct)
 
 

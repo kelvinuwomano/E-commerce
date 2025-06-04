@@ -10,8 +10,8 @@ const productRouter = express.Router();
 productRouter.post("/create-product", upload.array('images', 5), protect, adminMiddleware, createProduct)
 productRouter.put("/update-product/:id", upload.array('image', 5),protect, adminMiddleware, updateProduct)
 productRouter.delete("/delete-product/:id", protect, adminMiddleware, deleteProduct)
-productRouter.get("/category/:category", protect, getByCategory)
-productRouter.get("/all-product", protect, getAllProduct)
+productRouter.get("/category/:category", getByCategory)
+productRouter.get("/all-product", getAllProduct)
 
 
 module.exports = productRouter
