@@ -14,7 +14,7 @@ userRouter.post("/login", login)
 userRouter.get("/all-user", protect, adminMiddleware, getAllUser)
 userRouter.get("/one-product/:productId", getOneProduct)
 // userRouter.get("all-product", protect, getAllProduct)
-userRouter.get('user-cart', protect, getUserCart)
+userRouter.get('/user-cart', protect, getUserCart)
 
 
 
