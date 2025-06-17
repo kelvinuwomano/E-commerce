@@ -72,7 +72,7 @@ exports.createOrder = async (req, res) => {
 
 exports.getAllOrders = async (req, res) => {
     try {
-        const allOrder = await orderModel.find().populate('user', 'firstName lastName email items')
+        const allOrder = await orderModel.find().populate('user', 'firstName lastName email items.product')
         return res.status(200).json({message: "All orders", allOrder})
     } catch (error) {
         return res.status(400).json({message: "An error occurred", error: error.message})
